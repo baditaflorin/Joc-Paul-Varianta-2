@@ -15,7 +15,7 @@ Apoi vizitează `http://localhost:8000`.
 ## Comenzi
 
 - Butonul **ACTIVEAZĂ GAURA** sau tasta **Space** pornește/oprește gravitația.
-- Trage în scenă ca să rotești camera; folosește scroll pentru zoom.
+- Trage în scenă ca să rotești camera; folosește scroll sau butoanele + / − pentru zoom.
 - Butonul ♪ activează sunetele sintetizate.
 
 Three.js este încărcat din jsDelivr, iar fonturile din Google Fonts.

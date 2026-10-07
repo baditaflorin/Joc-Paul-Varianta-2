@@ -18,30 +18,30 @@
   <main class="shell">
     <header class="topbar">
       <a class="brand" href="#" aria-label="Joc Paul acasă"><span class="brand-mark">P<span>·</span></span><span>JOC PAUL <small>VARIANTA 02</small></span></a>
-      <div class="status"><i></i><span>SISTEM STABIL</span></div>
+      <div class="status" id="status" data-active="false"><i></i><span id="statusLabel">GATA DE PORNIRE</span></div>
       <button class="icon-button" id="soundButton" aria-label="Pornește sunetul" title="Sunet">♪</button>
     </header>
     <section class="game-layout">
       <div class="intro">
         <div class="eyebrow"><span class="eyebrow-line"></span> EXPERIMENTUL 001 <span class="eyebrow-line"></span></div>
         <h1>Apasă. <em>Absoarbe.</em></h1>
-        <p class="lede">O mică gaură neagră. O cameră întreagă. Tu decizi ce dispare.</p>
+        <p class="lede">Atrage toate cele 11 obiecte în gaură. Trage ca să privești camera din orice unghi.</p>
       </div>
       <div class="scene-wrap">
         <div class="scene-label"><span class="live-dot"></span> CAMERĂ DE TESTARE <span class="scene-coords">SECTOR 07 · 03:14</span></div>
         <div id="scene" aria-label="Scenă 3D interactivă cu o gaură neagră și obiecte de aspirat"></div>
         <div class="scene-vignette"></div>
-        <div class="hint" id="hint"><span class="hint-key">DRAG</span> rotește camera <span class="hint-sep">·</span> <span class="hint-key">SCROLL</span> apropie</div>
-        <div class="scene-bottom"><span>MASĂ GRAVITAȚIONALĂ <b id="gravity">0%</b></span><span id="sceneMessage">AȘTEAPTĂ COMANDA</span></div>
+        <div class="zoom-controls" aria-label="Controale zoom"><button id="zoomOut" aria-label="Depărtează camera">−</button><button id="zoomIn" aria-label="Apropie camera">+</button></div>
+        <div class="hint" id="hint"><span class="hint-key">TRAGE</span> rotește camera <span class="hint-sep">·</span> scroll sau + / − pentru zoom</div>
+        <div class="scene-bottom"><span>OBIECTE ABSORBITE <b id="absorbedCount">0 / 11</b></span><span id="sceneMessage" aria-live="polite">APASĂ BUTONUL CA SĂ ÎNCEPI</span></div>
       </div>
       <div class="controls">
-        <div class="control-copy"><span class="control-kicker">COMANDĂ PRINCIPALĂ</span><strong id="controlTitle">Totul e la locul lui.</strong><span id="controlText">Activează gaura și urmărește cum se schimbă regulile.</span></div>
-        <button class="activate" id="activate"><span class="button-icon">↗</span><span id="buttonLabel">ACTIVEAZĂ GAURA</span><span class="button-key">SPACE</span></button>
+        <div class="control-copy" aria-live="polite"><span class="control-kicker">COMANDĂ PRINCIPALĂ</span><strong id="controlTitle">Gata de pornire?</strong><span id="controlText">Apasă butonul și atrage toate cele 11 obiecte în gaură.</span></div>
+        <button class="activate" id="activate" aria-pressed="false"><span class="button-icon" aria-hidden="true">◉</span><span id="buttonLabel">ACTIVEAZĂ GAURA</span><span class="button-key">SPACE</span></button>
       </div>
       <footer class="footer"><span>UN EXPERIMENT PENTRU PAUL</span><span class="footer-right">GRAVITAȚIA E DOAR ÎNCEPUTUL <i>✳</i></span></footer>
     </section>
   </main>
-  <div id="toast" class="toast" role="status"></div>
   <script type="module" src="./game.js"></script>
 </body>
 </html>
